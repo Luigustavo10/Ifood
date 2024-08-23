@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Ifood</title>
+</head>
+
+<body>
+    <div class="d-flex min-vh-100">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light flex-column p-3" style="width: 20%;">
+            <img src="./img/logo.png" alt="iFood Logo" class="mx-auto mb-4" style="width: 80px;">
+            <h1 class="h4 text-center">Meu Restaurante</h1>
+            <div class="status bg-white text-success p-3 my-3 rounded text-center ">
+                <i class="fas fa-check-circle fa-lg"></i>
+                <strong class="d-block">Loja Aberta</strong>
+                <p class="mb-0">Dentro do horário programado</p>
+            </div>
+            <ul class="navbar-nav flex-column">
+                <li class="nav-item">
+                    <a href="#" class="nav-link d-flex align-items-center"><img src="./img/home.png" alt="" class="me-2" style="width: 22px;">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link d-flex align-items-center"><img src="./img/avaliaçoes.png" alt="" class="me-2" style="width: 22px;">Avaliações</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#" class="nav-link d-flex align-items-center text-danger"><img src="./img/financeiro.png" alt="" class="me-2 " style="width: 22px;">Financeiro</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link d-flex align-items-center"><img src="./img/cardapio.png" alt="" class="me-2" style="width: 22px;">Cardápio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link d-flex align-items-center"><img src="./img/horarios.png" alt="" class="me-2" style="width: 22px;">Horários</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link d-flex align-items-center"><img src="./img/localização.png" alt="" class="me-2" style="width: 22px;">Áreas de entrega</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link d-flex align-items-center"><img src="./img/Formasdepagamentos.png" alt="" class="me-2" style="width: 22px;">Formas de Pagamentos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link d-flex align-items-center"><img src="./img/promoçoes.png" alt="" class="me-2" style="width: 22px;">Promoções</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link d-flex align-items-center"><img src="./img/serviços.png" alt="" class="me-2" style="width: 22px;">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link d-flex align-items-center"><img src="./img/perfil.png" alt="" class="me-2" style="width: 22px;">Perfil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link d-flex align-items-center"><img src="./img/Desempenho.png" alt="" class="me-2" style="width: 22px;">Desempenho</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link d-flex align-items-center"><img src="./img/Conquistas.png" alt="" class="me-2" style="width: 22px;">Conquistas</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link d-flex align-items-center"><img src="./img/IfoodShop.png" alt="" class="me-2" style="width: 22px;">iFood Shop</a>
+                </li>
+                <li class="nav-item mt-5">
+                    <a href="#" class="nav-link d-flex align-items-center"><img src="./img/icons_user-64 1.png" alt="" class="me-2" style="width: 22px;">meu.restaurante@gmail.com</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="telas p-4 flex-grow-1 bg-white">
+            <header class="mb-4">
+                <a href="#" class="voltar btn btn-secondary">Voltar</a>
+                <h1 id="page-title" class="h4 mt-3">Pagamentos e Recebíveis</h1>
+                <div class="periodo-analisado">
+                    <span>Período analisado de</span>
+                    <select>
+                        <option value="01/01/24">01/01/24</option>
+                        <option value="01/02/24">01/02/24</option>
+                        <option value="01/03/24">01/03/24</option>
+                        <option value="01/04/24">01/04/24</option>
+                    </select>
+                    <span>a</span>
+                    <select>
+                        <option value="01/01/24">01/01/24</option>
+                        <option value="01/02/24">01/02/24</option>
+                        <option value="01/03/24">01/03/24</option>
+                        <option value="01/04/24">01/04/24</option>
+                    </select>
+                </div>
+                <a href="#" class="preciso-de-ajuda">
+                    <img src="./img/ajuda.png" alt=""> Preciso de Ajuda
+                </a>
+            </header>
+            </header>
+
+            <div class="container-fluid">
+                <div class="row mb-4">
+                    <div class="col-md-3 menu-item" onclick="showSection('dashboard')">Dashboard Financeiro</div>
+                    <div class="col-md-3 menu-item" onclick="showSection('saldo')">Saldo e Transações</div>
+                    <div class="col-md-3 menu-item" onclick="showSection('pagamentos')">Pagamentos e Recebíveis</div>
+                    <div class="col-md-3 menu-item" onclick="showSection('analises')">Análises Financeiras</div>
+                </div>
+
+                <div id="dashboard" class="section">
+                    <h2 class="h5 fs-3 fw-bold">Dashboard Financeiro</h2>
+                    <p>Conteúdo do Dashboard Financeiro...</p>
+                </div>
+
+                <div id="saldo" class="section">
+                    <h2 class="h5 fs-3 fw-bold">Saldo e Transações</h2>
+                    <p>Conteúdo de Saldo e Transações...</p>
+                </div>
+
+                <div id="pagamentos" class="section">
+                    <h2 class="h5 fs-3 fw-bold">Detalhes dos Valores</h2>
+                    <p>Aqui você encontra os detalhes dos seus pagamentos e recebíveis de todas suas transações</p>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Descrição Produtos</th>
+                                    <th>Valor Bruto</th>
+                                    <th>Valor Desconto iFood</th>
+                                    <th>Taxa de Entrega</th>
+                                    <th>Valor Líquido</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Xburguer-Cheese</td>
+                                    <td>R$34,95</td>
+                                    <td class="text-danger">- R$8,50</td>
+                                    <td>R$3,00</td>
+                                    <td class="text-success">+ R$29,45</td>
+                                    <td><a href="#" class="text-dark text-decoration-underline">Saiba Mais</a></td>
+                                <tr>
+                                    <td>Xburguer-Bacon</td>
+                                    <td>R$37,80</td>
+                                    <td class="text-danger">- R$8,50</td>
+                                    <td>R$3,00</td>
+                                    <td class="text-success">+ R$29,45</td>
+                                    <td><a href="#" class="text-dark text-decoration-underline">Saiba Mais</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Xburguer-Salad</td>
+                                    <td>R$31,65</td>
+                                    <td class="text-danger">- R$8,50</td>
+                                    <td>R$3,00</td>
+                                    <td class="text-success">+ R$29,45</td>
+                                    <td><a href="#" class="text-dark text-decoration-underline">Saiba Mais</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Xburguer-Tudo</td>
+                                    <td>R$39,95</td>
+                                    <td class="text-danger">- R$8,50</td>
+                                    <td>R$3,00</td>
+                                    <td class="text-success">+ R$29,45</td>
+                                    <td><a href="#" class="text-dark text-decoration-underline">Saiba Mais</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Xburguer-Cheese</td>
+                                    <td>R$34,95</td>
+                                    <td class="text-danger">- R$8,50</td>
+                                    <td>R$3,00</td>
+                                    <td class="text-success">+ R$29,45</td>
+                                    <td><a href="#" class="text-dark text-decoration-underline">Saiba Mais</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Xburguer-Bacon</td>
+                                    <td>R$37,80</td>
+                                    <td class="text-danger">- R$8,50</td>
+                                    <td>R$3,00</td>
+                                    <td class="text-success">+ R$29,45</td>
+                                    <td><a href="#" class="text-dark text-decoration-underline">Saiba Mais</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Xburguer-Salad</td>
+                                    <td>R$31,65</td>
+                                    <td class="text-danger">- R$8,50</td>
+                                    <td>R$3,00</td>
+                                    <td class="text-success">+ R$29,45</td>
+                                    <td><a href="#" class="text-dark text-decoration-underline">Saiba Mais</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Xburguer-Tudo</td>
+                                    <td>R$39,95</td>
+                                    <td class="text-danger">- R$8,50</td>
+                                    <td>R$3,00</td>
+                                    <td class="text-success">+ R$29,45</td>
+                                    <td><a href="#" class="text-dark text-decoration-underline">Saiba Mais</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="analises" class="section">
+                    <h2 class="h5 fs-3 fw-bold">Análises Financeiras</h2>
+                    <p>Conteúdo de Análises Financeiras...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="./src/app.js"></script>
+</body>
+
+</html>
