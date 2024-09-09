@@ -14,3 +14,18 @@ function showSection(sectionId) {
 
 // Exibir a primeira seção por padrão
 showSection('dashboard');
+
+// Função para aplicar o filtro
+function applyFilter() {
+    const filterType = document.getElementById('filter-type').value;
+    const rows = document.querySelectorAll('#transactions-table tr');
+    
+    rows.forEach(row => {
+        const rowType = row.getAttribute('data-type');
+        if (filterType === 'all' || filterType === rowType) {
+            row.style.display = '';
+        } else {
+            row.style.display = 'none';
+        }
+    });
+}

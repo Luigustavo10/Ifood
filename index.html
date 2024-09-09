@@ -113,7 +113,95 @@
 
                 <div id="saldo" class="section">
                     <h2 class="h5 fs-3 fw-bold">Saldo e Transações</h2>
-                    <p>Conteúdo de Saldo e Transações...</p>
+                    <p>Visualize seu saldo e tenha controle de suas transações</p>
+
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <!-- Barra de pesquisa -->
+                                <div class="search-bar-wrapper">
+                                    <input type="text" class="form-control search-bar" placeholder="Buscar transações...">
+                                    <button class="find-button" onclick="applyFilter()">Buscar</button>
+                                </div>    
+                            </div>
+                        </div>
+        
+                        <!-- Filtros -->
+                        <div class="row mt-3" id="filter-section">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="filter-type">Filtrar por tipo de operação:</label>
+                                    <select id="filter-type" class="form-control">
+                                        <option value="all">Todos</option>
+                                        <option value="debit">Débito</option>
+                                        <option value="credit">Crédito</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Botão de Filtrar -->
+                            <div class="col-12 mt-2">
+                                <button class="filter-button" onclick="applyFilter()">Aplicar Filtro</button>
+                            </div>
+                        </div>
+
+                        <!-- Tabela de saldo e transações -->
+                        <div class="table-responsive">
+                            <table class="table table-bordered custom-table">
+                                <thead>
+                                    <tr>
+                                        <th>Data e hora</th>
+                                        <th>Tipo de operação</th>
+                                        <th>Valor</th>
+                                        <th>Taxa</th>
+                                        <th>Saldo</th>
+                                        <th>Tipo</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="transactions-table">
+                                    <tr data-type="credit">
+                                        <td>01/01/2024 - 10:58</td>
+                                        <td><span class="credit">Crédito</span></td>
+                                        <td>R$ 100,00</td>
+                                        <td><span class="taxa-negativa">R$ 3,00</span></td>
+                                        <td><span class="saldo-positivo">R$ 97,00</span></td>
+                                        <td>Pedido</td>
+                                    </tr>
+                                    <tr data-type="credit">
+                                        <td>01/01/2024 - 12:02</td>
+                                        <td><span class="credit">Crédito</span></td>
+                                        <td>R$ 20,00</td>
+                                        <td><span class="taxa-negativa">R$ 2,00</span></td>
+                                        <td><span class="saldo-positivo">R$ 115,00</span></td>
+                                        <td>Pedido</td>
+                                    </tr>
+                                    <tr data-type="debit">
+                                        <td>01/01/2024 - 12:20</td>
+                                        <td><span class="debit">Débito</span></td>
+                                        <td>R$ 18,00</td>
+                                        <td><span class="taxa-positiva">R$ 0,00</span></td>
+                                        <td><span class="saldo-negativo">R$ 97,00</span></td>
+                                        <td>Cancelamento</td>
+                                    </tr>
+                                    <tr data-type="credit">
+                                        <td>01/01/2024 - 12:56</td>
+                                        <td><span class="credit">Crédito</span></td>
+                                        <td>R$ 50,00</td>
+                                        <td><span class="taxa-negativa">R$ 3,00</span></td>
+                                        <td><span class="saldo-positivo">R$ 144,00</span></td>
+                                        <td>Pedido</td>
+                                    </tr>
+                                    <tr data-type="credit">
+                                        <td>01/01/2024 - 13:09</td>
+                                        <td><span class="credit">Crédito</span></td>
+                                        <td>R$ 90,00</td>
+                                        <td><span class="taxa-negativa">R$ 3,00</span></td>
+                                        <td><span class="saldo-positivo">R$ 231,00</span></td>
+                                        <td>Pedido</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="pagamentos" class="section">
