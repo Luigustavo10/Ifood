@@ -78,6 +78,61 @@ body {
     margin-right: 10px;
 }
 
+/* Busca e filtro */
+.filter-button, .find-button {
+    background-color: #FF0A18;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Tabela */
+.custom-table {
+    margin-top: 20px;
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+.custom-table th {
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 12px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.custom-table td {
+    padding: 12px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+.credit {
+    color: green;
+}
+
+.debit {
+    color: #FF0A18;
+}
+
+.taxa-negativa {
+    color: #FF0A18;
+}
+
+.saldo-positivo {
+    color: green;
+}
+
+.saldo-negativo {
+    color: #FF0A18;
+}
+
 @media (max-width: 768px) {
     #sidebar {
         width: 100%;
@@ -112,5 +167,13 @@ body {
 
     .voltar {
         width: 100%;
+    }
+
+    .search-bar {
+        font-size: 14px;
+    }
+
+    .search-button, .filter-button {
+        right: 10px;
     }
 }
