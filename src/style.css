@@ -177,3 +177,60 @@ body {
         right: 10px;
     }
 }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            margin: 10px;
+            display: flex;
+        }
+
+        .card h3 {
+            margin: 0px;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .card p {
+            margin: 30px 30px 30px;
+            color: #666;
+        }
+
+        .container-cards {
+            margin-top: 20px;
+        }
+
+        .container {
+            display: flex;
+            margin: 30px 30px 30px;
+            justify-content: center;
+        }
+
+        #myChartContainer {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+        }
+
+        .chart-container {
+            flex: 1;
+            padding: 10px;
+        }
+
+        #myChart, #mySecondChart {
+            width: 100% !important;
+            height: 300px !important; /* Adjust the height as needed */
+        }
+.container-fimd > div {
+            background-color: #f1f1f1;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 15px;
+}

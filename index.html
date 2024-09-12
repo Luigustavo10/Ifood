@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="./src/style.css">
     <title>Ifood</title>
 </head>
@@ -108,8 +109,130 @@
 
                 <div id="dashboard" class="section">
                     <h2 class="h5 fs-3 fw-bold">Dashboard Financeiro</h2>
-                    <p>Conteúdo do Dashboard Financeiro...</p>
-                </div>
+                    <p>Aqui você irá encontrar uma análise detalhada de vendas.</p>
+                
+                <div class="container">
+                    <div class="card">
+                        <h3>Lucro</h3>
+                        <p>R$45,678.90</p>
+                        <p1>Total arrecadado no App</p1>
+                    </div>
+                    <div class="card">
+                        <h3>Ganhos mensais</h3>
+                        <p>R$7.000,00</p>
+                        <p1>+33% em relação ao mês anterior</p1>
+                    </div>
+                    <div class="card">
+                        <h3>Porcentagem de lucro</h3>
+                        <p>67%</p>
+                        <p1>Em relação aos produtos</p1>
+                    </div>
+                    </div>
+                    <div id="myChartContainer" class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 chart-container">
+                                <canvas id="myChart"></canvas>
+                            </div>
+                            <div class="col-md-6 chart-container">
+                                <canvas id="mySecondChart"></canvas>
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="container"></div>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <p>Queridinhos do mês</p>
+                                <tr>
+                                    <th>Descrição Produtos</th>
+                                    <th>Valor Bruto</th>
+                                    <th>Valor Desconto iFood</th>
+                                    <th>Taxa de Entrega</th>
+                                    <th>Valor Líquido</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Xburguer-Cheese</td>
+                                    <td>R$34,95</td>
+                                    <td class="text-danger">- R$8,50</td>
+                                    <td>R$3,00</td>
+                                    <td class="text-success">+ R$29,45</td>
+                                    <td><a href="#" class="text-dark text-decoration-underline">84% de lucro</a></td>
+                                <tr>
+                                    <td>Xburguer-Bacon</td>
+                                    <td>R$37,80</td>
+                                    <td class="text-danger">- R$8,50</td>
+                                    <td>R$3,00</td>
+                                    <td class="text-success">+ R$29,45</td>
+                                    <td><a href="#" class="text-dark text-decoration-underline">78% de lucro</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Xburguer-Salad</td>
+                                    <td>R$31,65</td>
+                                    <td class="text-danger">- R$8,50</td>
+                                    <td>R$3,00</td>
+                                    <td class="text-success">+ R$29,45</td>
+                                    <td><a href="#" class="text-dark text-decoration-underline">93% de lucro</a></td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                        
+                    </div>
+                    </div>
+<!-- Chart.js script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var ctx1 = document.getElementById('myChart').getContext('2d');
+        var myChart1 = new Chart(ctx1, {
+            type: 'line',
+            data: {
+                labels: ['24/08', '25/08', '26/08', '27/08', '28/08', '29/08', '30/08'],
+                datasets: [{
+                    label: 'Relatório dos últimos 7 dias',
+                    data: [1000, 2000, 3000, 4000, 5000, 6000, 7000],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        var ctx2 = document.getElementById('mySecondChart').getContext('2d');
+        var myChart2 = new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                datasets: [{
+                    label: 'Gráfico de rendimentos',
+                    data: [4000, 5500, 7000, 8050, 7490, 8500, 9200],
+                    backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                    borderColor: 'rgba(153, 102, 255, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    });
+</script>
 
                 <div id="saldo" class="section">
                     <h2 class="h5 fs-3 fw-bold">Saldo e Transações</h2>
@@ -202,7 +325,7 @@
                             </table>
                         </div>
                     </div>
-                </div>
+                
 
                 <div id="pagamentos" class="section">
                     <h2 class="h5 fs-3 fw-bold">Detalhes dos Valores</h2>
@@ -293,6 +416,7 @@
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     
         <!-- Bootstrap JS -->
